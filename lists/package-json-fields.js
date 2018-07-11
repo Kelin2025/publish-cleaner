@@ -7,6 +7,7 @@ module.exports = [
   "main",
   "module",
   "browser",
+  "scripts",
   "repository",
   "bugs",
   "homepage",
@@ -14,5 +15,7 @@ module.exports = [
   "license",
   "dependencies",
   "peerDependencies",
-  "sideEffects"
+  "sideEffects",
+  "types",
+  "engines"
 ]
