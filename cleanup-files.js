@@ -1,3 +1,5 @@
+var ignoredFiles = require("./lists/ignore-files")
+
 function isFileIgnored(file) {
   for (var i in ignoredFiles) {
     if (typeof ignoredFiles[i] === "string" && file === ignoredFiles[i]) {
