@@ -3,6 +3,7 @@ module.exports = [
   ".vscode",
   "yarn.lock",
   /^\.eslintrc/,
+  /\.test\.js$/,
   ".babelrc",
   ".jsdocrc",
   "appveyor.yml",
