@@ -20,9 +20,11 @@ var cleanupFiles = require("./cleanup-files")
   var files = fs.readdirSync("./")
 
   // Copy all files
-  var copies = cleanupFiles(files).map(function(file) {
-    return fse.copy(file, path.join(tmpObj.name, file))
-  })
+  var copies = cleanupFiles(files)
+    .filter(file => file !== "package.json")
+    .map(function(file) {
+      return fse.copy(file, path.join(tmpObj.name, file))
+    })
 
   // Add clean package.json
   var dirtyPkg = JSON.parse(fs.readFileSync("./package.json").toString())

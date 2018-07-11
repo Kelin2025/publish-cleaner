@@ -15,6 +15,6 @@ function isFileIgnored(file) {
 
 module.exports = function cleanupFiles(files) {
   return files.filter(function(file) {
-    return !isFileIgnored(file) && file !== "package.json"
+    return !isFileIgnored(file)
   })
 }
