@@ -1,6 +1,6 @@
 {
   "name": "publish-cleaner",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cleanup your npm package for publish",
   "main": "index.js",
   "dependencies": {
