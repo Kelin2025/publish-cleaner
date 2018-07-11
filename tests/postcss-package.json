@@ -1,0 +1,96 @@
+{
+  "name": "postcss",
+  "version": "6.0.23",
+  "description": "Tool for transforming styles with JS plugins",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "css",
+    "postcss",
+    "rework",
+    "preprocessor",
+    "parser",
+    "source map",
+    "transform",
+    "manipulation",
+    "transpiler"
+  ],
+  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "license": "MIT",
+  "homepage": "https://postcss.org/",
+  "repository": "postcss/postcss",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "source-map": "^0.6.1",
+    "supports-color": "^5.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-precompile-charcodes": "^1.1.0",
+    "babel-preset-env": "^1.7.0",
+    "concat-with-sourcemaps": "^1.1.0",
+    "del": "^3.0.0",
+    "docdash": "^0.4.0",
+    "eslint": "^4.19.1",
+    "eslint-ci": "^0.1.1",
+    "eslint-config-postcss": "^2.0.2",
+    "fs-extra": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-json-editor": "^2.3.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "jsdoc": "^3.5.5",
+    "lint-staged": "^7.1.0",
+    "postcss-parser-tests": "^6.3.0",
+    "pre-commit": "^1.2.2",
+    "run-sequence": "^2.2.1",
+    "size-limit": "^0.17.1",
+    "strip-ansi": "^4.0.0",
+    "yaspeller-ci": "^1.0.0"
+  },
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "spell": "yarn docs && yaspeller-ci api/*.html *.md docs/{**/,}*.md",
+    "docs": "jsdoc -c .jsdocrc lib/*.es6",
+    "lint": "eslint-ci *.js lib/*.es6 test/*.js",
+    "test": "gulp && jest && yarn lint && yarn spell && size-limit"
+  },
+  "main": "lib/postcss",
+  "types": "lib/postcss.d.ts",
+  "pre-commit": ["lint-staged"],
+  "browser": {
+    "supports-color": false,
+    "chalk": false,
+    "fs": false
+  },
+  "size-limit": [
+    {
+      "path": "lib/postcss.js",
+      "limit": "29 KB"
+    }
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "modulePathIgnorePatterns": ["<rootDir>/build"]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint-config-postcss",
+    "rules": {
+      "consistent-return": "off",
+      "valid-jsdoc": "error",
+      "complexity": "off",
+      "no-new": "off"
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    }
+  }
+}
