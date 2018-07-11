@@ -1,0 +1,24 @@
+{
+  "name": "publish-cleaner",
+  "version": "0.1.0",
+  "description": "Cleanup your npm package for publish",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^6.0.1",
+    "tmp": "^0.0.33"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelin2025/clean-pub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kelin2025/clean-pub/issues"
+  },
+  "homepage": "https://github.com/kelin2025/clean-pub#readme"
+}
