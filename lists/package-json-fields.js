@@ -3,6 +3,7 @@ module.exports = [
   "version",
   "description",
   "keywords",
+  "bin",
   "main",
   "module",
   "browser",
