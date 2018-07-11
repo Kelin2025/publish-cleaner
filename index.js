@@ -43,11 +43,8 @@ var cleanupFiles = require("./cleanup-files")
     var script = isWindows ? "npm.cmd" : "npm"
 
     var publish = childProcess.spawn(script, ["publish"], {
+      stdio: "inherit",
       workingDirectory: tmpObj.name
     })
-
-    publish.stderr
-      .on("data", data => console.log(data.toString()))
-      .on("error", console.log)
   })
 })()
