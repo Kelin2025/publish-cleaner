@@ -7,9 +7,11 @@
     "fs-extra": "^6.0.1",
     "tmp": "^0.0.33"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^23.4.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest -c"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,6 @@
     "url": "https://github.com/kelin2025/clean-pub/issues"
   },
   "bin": "index.js",
-  "homepage": "https://github.com/kelin2025/clean-pub#readme"
+  "homepage": "https://github.com/kelin2025/clean-pub#readme",
+  "eslint": {}
 }
