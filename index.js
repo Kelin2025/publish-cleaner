@@ -13,7 +13,8 @@ var cleanupFiles = require("./cleanup-files")
   // Create temp dir
   var tmpObj = tmp.dirSync({
     mode: 0777,
-    prefix: "npm-publish"
+    prefix: "npm-publish",
+    unsafeCleanup: true
   })
 
   // Read folder
